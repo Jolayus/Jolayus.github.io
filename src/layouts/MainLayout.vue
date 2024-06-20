@@ -16,20 +16,23 @@
         <q-btn flat round dense icon="whatshot" />
         <q-btn flat round dense icon="whatshot" />
         <q-btn flat round dense icon="whatshot" />
+        <q-btn flat round dense icon="whatshot" />
       </q-toolbar>
     </q-header>
 
     <q-page-container>
       <IndexPage style="border: 5px solid red" />
       <AboutPage style="border: 5px solid blue" />
-      <ContactsPage style="border: 5px solid green" />
-      <ProjectsPage style="border: 5px solid yellow" />
       <ExperiencePage style="border: 5px solid black" />
+      <ProjectsPage style="border: 5px solid yellow" />
+      <ContactsPage style="border: 5px solid green" />
     </q-page-container>
 
     <q-footer elevated>
       <q-toolbar>
-        <q-toolbar-title> Footer </q-toolbar-title>
+        <q-toolbar-title>
+          Copyright © 2024 JSC. All Rights Reserved.
+        </q-toolbar-title>
       </q-toolbar>
     </q-footer>
   </q-layout>
@@ -39,21 +42,21 @@
 import { defineComponent } from "vue";
 import IndexPage from "src/pages/IndexPage.vue";
 import AboutPage from "src/pages/AboutPage.vue";
-import ContactsPage from "src/pages/ContactsPage.vue";
-import ProjectsPage from "src/pages/ProjectsPage.vue";
 import ExperiencePage from "src/pages/ExperiencePage.vue";
+import ProjectsPage from "src/pages/ProjectsPage.vue";
+import ContactsPage from "src/pages/ContactsPage.vue";
 
 export default defineComponent({
   name: "MainLayout",
   components: {
     IndexPage,
     AboutPage,
-    ContactsPage,
-    ProjectsPage,
     ExperiencePage,
+    ProjectsPage,
+    ContactsPage,
   },
   setup() {
-    return { IndexPage, AboutPage, ContactsPage, ProjectsPage, ExperiencePage };
+    return { IndexPage, AboutPage, ExperiencePage, ProjectsPage, ContactsPage };
   },
 });
 </script>
