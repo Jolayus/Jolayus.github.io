@@ -21,7 +21,7 @@
     </q-header>
 
     <q-page-container>
-      <IndexPage style="border: 5px solid red" />
+      <IndexPage />
       <AboutPage style="border: 5px solid blue" />
       <ExperiencePage style="border: 5px solid black" />
       <ProjectsPage style="border: 5px solid yellow" />
