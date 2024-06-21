@@ -5,7 +5,7 @@
     leave-active-class="animated fadeOut"
     :duration="2000"
   >
-    <q-page class="column items-center red-border">
+    <q-page class="column items-center">
       <div class="q-mt-xl column flex-center justify-center items-center">
         <p class="text-weight-light text-center">Get To Know More</p>
         <p class="text-h3 text-weight-bold text-center">About Me</p>
@@ -102,9 +102,5 @@ export default defineComponent({
 
 .border-1-solid {
   border: 1px solid black;
-}
-
-.red-border {
-  border: 1px solid red;
 }
 </style>
