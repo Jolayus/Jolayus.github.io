@@ -5,9 +5,13 @@
     style="height: 100vh"
     class="shadow-2 rounded-borders"
   >
-    <q-header elevated>
-      <q-toolbar style="width: 80vw; margin: 0 auto">
-        <q-avatar>
+    <q-header
+      elevated
+      class="flex flex-center items-center justify-center hidden"
+      style="height: 10vh; background-color: transparent"
+    >
+      <q-toolbar style="width: 80vw; margin: 0 auto; color: black">
+        <q-avatar color="black">
           <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg" />
         </q-avatar>
 
@@ -25,10 +29,14 @@
       <AboutPage style="border: 5px solid blue" />
       <ExperiencePage style="border: 5px solid black" />
       <ProjectsPage style="border: 5px solid yellow" />
-      <ContactsPage style="border: 5px solid green" />
+      <ContactsPage />
     </q-page-container>
 
-    <q-footer elevated>
+    <q-footer
+      elevated
+      class="text-center hidden"
+      style="background-color: transparent; color: black"
+    >
       <q-toolbar>
         <q-toolbar-title>
           Copyright © 2024 JSC. All Rights Reserved.
