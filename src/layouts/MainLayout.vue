@@ -26,7 +26,7 @@
 
     <q-page-container>
       <IndexPage />
-      <AboutPage style="border: 5px solid blue" />
+      <AboutPage />
       <ExperiencePage style="border: 5px solid black" />
       <ProjectsPage style="border: 5px solid yellow" />
       <ContactsPage />

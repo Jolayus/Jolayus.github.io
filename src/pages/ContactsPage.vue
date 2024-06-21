@@ -7,9 +7,9 @@
   >
     <q-page
       class="column flex-center items-center"
-      style="width: 70vw; min-height: 50vh; margin: 0 auto"
+      style="width: 70vw; min-height: 70vh; margin: 0 auto"
     >
-      <p class="text-weight-light text-center">Get in touch</p>
+      <p class="text-weight-light text-center">Get In Touch</p>
       <p class="text-h3 text-weight-bold text-center">Contact Me</p>
 
       <div
