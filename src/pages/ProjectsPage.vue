@@ -67,7 +67,6 @@ export default defineComponent({
 
 <style scoped>
 .projects-container {
-  width: 100vw;
   margin-top: 8vh;
 }
 

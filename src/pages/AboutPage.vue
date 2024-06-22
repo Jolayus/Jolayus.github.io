@@ -72,7 +72,6 @@ export default defineComponent({
 
 <style scoped>
 .about-me-container {
-  width: 100vw;
   margin-top: 15vh;
 }
 
