@@ -28,7 +28,7 @@
       <IndexPage />
       <AboutPage />
       <ExperiencePage style="border: 5px solid black" />
-      <ProjectsPage style="border: 5px solid yellow" />
+      <ProjectsPage />
       <ContactsPage />
     </q-page-container>
 
