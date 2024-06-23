@@ -25,11 +25,13 @@
     </q-header>
 
     <q-page-container>
-      <IndexPage />
-      <AboutPage />
-      <ExperiencePage style="border: 5px solid black" />
-      <ProjectsPage />
-      <ContactsPage />
+      <q-scroll-area class="main-layout-scroll-area" :thumb-style="thumbStyle">
+        <IndexPage />
+        <AboutPage />
+        <ExperiencePage />
+        <ProjectsPage />
+        <ContactsPage
+      /></q-scroll-area>
     </q-page-container>
 
     <q-footer
@@ -64,7 +66,23 @@ export default defineComponent({
     ContactsPage,
   },
   setup() {
-    return { IndexPage, AboutPage, ExperiencePage, ProjectsPage, ContactsPage };
+    return {
+      IndexPage,
+      AboutPage,
+      ExperiencePage,
+      ProjectsPage,
+      ContactsPage,
+      thumbStyle: {
+        backgroundColor: "transparent",
+      },
+    };
   },
 });
 </script>
+
+<style>
+.main-layout-scroll-area {
+  height: 100vh;
+  max-width: 100vw;
+}
+</style>
