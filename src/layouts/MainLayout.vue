@@ -7,7 +7,7 @@
   >
     <q-header
       elevated
-      class="flex flex-center items-center justify-center hidden"
+      class="flex flex-center items-center justify-center"
       style="height: 10vh; background-color: transparent"
     >
       <q-toolbar style="width: 80vw; margin: 0 auto; color: black">
@@ -15,12 +15,12 @@
           <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg" />
         </q-avatar>
 
-        <q-toolbar-title>Quasar Framework</q-toolbar-title>
+        <q-toolbar-title>JSC</q-toolbar-title>
 
-        <q-btn flat round dense icon="whatshot" />
-        <q-btn flat round dense icon="whatshot" />
-        <q-btn flat round dense icon="whatshot" />
-        <q-btn flat round dense icon="whatshot" />
+        <q-btn flat label="About" />
+        <q-btn flat label="Experience" />
+        <q-btn flat label="Projects" />
+        <q-btn flat label="Contacts" />
       </q-toolbar>
     </q-header>
 
@@ -35,13 +35,15 @@
     </q-page-container>
 
     <q-footer
-      elevated
-      class="text-center hidden"
+      elevated=""
+      class="text-center"
       style="background-color: transparent; color: black"
     >
       <q-toolbar>
         <q-toolbar-title>
-          Copyright © 2024 JSC. All Rights Reserved.
+          <p class="q-ma-none text-h6 text-weight-light">
+            Copyright © 2024 JSC. All Rights Reserved.
+          </p>
         </q-toolbar-title>
       </q-toolbar>
     </q-footer>
@@ -82,7 +84,7 @@ export default defineComponent({
 
 <style>
 .main-layout-scroll-area {
-  height: 100vh;
+  height: 84.555vh;
   max-width: 100vw;
 }
 </style>
