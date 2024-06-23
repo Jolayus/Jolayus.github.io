@@ -31,6 +31,7 @@
           <div class="about-me-details-section row">
             <div
               class="about-me-details border-radius-25 border-1-solid column items-center justify-center"
+              @click="aboutDialog = true"
             >
               <q-icon class="q-mt-md q-mb-sm" name="work_history" size="25px" />
               <p class="q-mb-xs text-h6 text-weight-bold">Experience</p>
@@ -41,6 +42,7 @@
             </div>
             <div
               class="about-me-details border-radius-25 border-1-solid column items-center justify-center"
+              @click="aboutDialog = true"
             >
               <q-icon class="q-mt-md q-mb-sm" name="school" size="25px" />
               <p class="q-mb-xs text-h6 text-weight-bold">Education</p>
@@ -61,16 +63,44 @@
           </div>
         </div>
       </div>
+
+      <!-- Temporary -->
+      <q-dialog v-model="aboutDialog">
+        <q-card class="border-radius-25">
+          <q-toolbar>
+            <q-avatar>
+              <img src="https://cdn.quasar.dev/logo-v2/svg/logo.svg" />
+            </q-avatar>
+
+            <q-toolbar-title
+              ><span class="text-weight-bold">Quasar</span>
+              Framework</q-toolbar-title
+            >
+
+            <q-btn flat round dense icon="close" v-close-popup />
+          </q-toolbar>
+
+          <q-card-section>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+            repellendus sit voluptate voluptas eveniet porro. Rerum blanditiis
+            perferendis totam, ea at omnis vel numquam exercitationem aut, natus
+            minima, porro labore.
+          </q-card-section>
+        </q-card>
+      </q-dialog>
     </q-page>
   </transition>
 </template>
 
 <script>
-import { defineComponent } from "vue";
+import { ref } from "vue";
 
-export default defineComponent({
+export default {
   name: "AboutPage",
-});
+  setup() {
+    return { aboutDialog: ref(false) };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -91,6 +121,25 @@ export default defineComponent({
   height: 175px;
   width: 500px;
   margin: 0px 16px 0px 16px;
+  position: relative; /* Required for the ::before pseudo-element */
+  overflow: hidden; /* To prevent the ::before element from overflowing */
+}
+
+.about-me-details::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: grey;
+  opacity: 0; /* Start with opacity 0 */
+  transition: opacity 0.3s; /* Smooth transition */
+  z-index: -1; /* Ensure it stays behind the content */
+}
+
+.about-me-details:hover::before {
+  opacity: 0.3; /* Change opacity to 50% on hover */
 }
 
 .about-me-details-text {
