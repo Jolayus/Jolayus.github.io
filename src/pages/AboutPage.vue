@@ -16,7 +16,10 @@
       >
         <div>
           <q-avatar class="border-radius-25" rounded size="375px">
-            <q-img src="../assets/my_photo_2.jpg">
+            <q-img
+              src="../assets/default_avatar.webp"
+              style="filter: grayscale(0.6)"
+            >
               <!-- <div class="absolute-full text-subtitle2 flex flex-center"></div> -->
             </q-img>
           </q-avatar>
@@ -70,7 +73,7 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .about-me-container {
   margin-top: 15vh;
 }
@@ -95,11 +98,15 @@ export default defineComponent({
   width: 55vw;
 }
 
-.border-radius-25 {
-  border-radius: 25px;
+@for $i from 1 through 50 {
+  .border-radius-#{$i} {
+    border-radius: #{$i}px;
+  }
 }
 
-.border-1-solid {
-  border: 1px solid black;
+@for $i from 1 through 5 {
+  .border-#{$i}-solid {
+    border: #{$i}px solid black;
+  }
 }
 </style>

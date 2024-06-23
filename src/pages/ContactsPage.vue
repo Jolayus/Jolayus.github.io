@@ -22,7 +22,7 @@
             </q-item-section>
 
             <q-item-section>
-              <q-item-label>+63 947 462 6020</q-item-label>
+              <q-item-label class="q-mt-xs">+63 947 462 6020</q-item-label>
             </q-item-section>
           </q-item>
         </div>
@@ -40,7 +40,9 @@
             </q-item-section>
 
             <q-item-section>
-              <q-item-label>cabangonjulius86@gmail.com</q-item-label>
+              <q-item-label class="q-mt-xs"
+                >cabangonjulius86@gmail.com</q-item-label
+              >
             </q-item-section>
           </q-item>
         </div>
@@ -58,7 +60,7 @@
             </q-item-section>
 
             <q-item-section>
-              <q-item-label>LinkedIn</q-item-label>
+              <q-item-label class="q-mt-xs">LinkedIn</q-item-label>
             </q-item-section>
           </q-item>
         </div>
@@ -75,12 +77,16 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-.border-radius-25 {
-  border-radius: 25px;
+<style lang="scss" scoped>
+@for $i from 1 through 50 {
+  .border-radius-#{$i} {
+    border-radius: #{$i}px;
+  }
 }
 
-.border-1-solid {
-  border: 1px solid black;
+@for $i from 1 through 5 {
+  .border-#{$i}-solid {
+    border: #{$i}px solid black;
+  }
 }
 </style>

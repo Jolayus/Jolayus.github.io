@@ -24,14 +24,19 @@
             <div class="absolute-full text-subtitle2 flex flex-center"></div>
           </q-img>
 
-          <div class="row items-center justify-center">
-            <p class="q-my-md q-mr-sm text-h6 text-weight-bold">Project 1</p>
+          <div
+            class="q-my-md row items-center justify-center border-1-solid border-radius-25"
+          >
+            <p class="q-my-xs q-ml-md q-mr-sm text-h6 text-weight-bold">
+              Project 1
+            </p>
             <q-btn
-              class="q-ml-sm"
+              class="q-mx-sm"
               size="sm"
               round
               color="black"
               icon="ion-information-circle-outline"
+              @click="projectDialog = true"
             />
           </div>
 
@@ -53,19 +58,49 @@
           </div>
         </div>
       </div>
+
+      <!-- Temporary -->
+      <q-dialog v-model="projectDialog">
+        <q-card class="border-radius-25">
+          <q-toolbar>
+            <q-avatar>
+              <img src="https://cdn.quasar.dev/logo-v2/svg/logo.svg" />
+            </q-avatar>
+
+            <q-toolbar-title
+              ><span class="text-weight-bold">Quasar</span>
+              Framework</q-toolbar-title
+            >
+
+            <q-btn flat round dense icon="close" v-close-popup />
+          </q-toolbar>
+
+          <q-card-section>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+            repellendus sit voluptate voluptas eveniet porro. Rerum blanditiis
+            perferendis totam, ea at omnis vel numquam exercitationem aut, natus
+            minima, porro labore.
+          </q-card-section>
+        </q-card>
+      </q-dialog>
     </q-page>
   </transition>
 </template>
 
 <script>
-import { defineComponent } from "vue";
+import { ref } from "vue";
 
-export default defineComponent({
+export default {
   name: "ProjectsPage",
-});
+  setup() {
+    return {
+      projectDialog: ref(false),
+    };
+  },
+};
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .projects-container {
   margin-top: 8vh;
 }
@@ -80,12 +115,16 @@ export default defineComponent({
   width: 400px;
 }
 
-.border-radius-25 {
-  border-radius: 25px;
+@for $i from 1 through 50 {
+  .border-radius-#{$i} {
+    border-radius: #{$i}px;
+  }
 }
 
-.border-1-solid {
-  border: 1px solid black;
+@for $i from 1 through 5 {
+  .border-#{$i}-solid {
+    border: #{$i}px solid black;
+  }
 }
 
 .red-border {
