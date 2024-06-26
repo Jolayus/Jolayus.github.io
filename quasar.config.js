@@ -144,9 +144,9 @@ module.exports = configure(function (ctx) {
       },
 
       manifest: {
-        name: `Quasar App`,
-        short_name: `Quasar App`,
-        description: `A Quasar Project`,
+        name: `Jolayus Web Portfolio`,
+        short_name: `Web Portfolio`,
+        description: `A Web Portfolio Project`,
         display: "standalone",
         orientation: "portrait",
         background_color: "#ffffff",

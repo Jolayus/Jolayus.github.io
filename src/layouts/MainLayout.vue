@@ -6,6 +6,7 @@
     class="shadow-2 rounded-borders"
   >
     <q-header
+      reveal
       elevated
       class="flex flex-center items-center justify-center"
       style="height: 10vh; background-color: transparent"
@@ -17,25 +18,26 @@
 
         <q-toolbar-title>JSC</q-toolbar-title>
 
-        <q-btn flat label="About" />
-        <q-btn flat label="Experience" />
-        <q-btn flat label="Projects" />
-        <q-btn flat label="Contacts" />
+        <q-btn href="#aboutPage" flat label="About" />
+        <q-btn href="#experiencePage" flat label="Experience" />
+        <q-btn href="#projectsPage" flat label="Projects" />
+        <q-btn href="#contactsPage" flat label="Contacts" />
       </q-toolbar>
     </q-header>
 
     <q-page-container>
       <q-scroll-area class="main-layout-scroll-area" :thumb-style="thumbStyle">
-        <IndexPage />
-        <AboutPage />
-        <ExperiencePage />
-        <ProjectsPage />
-        <ContactsPage
-      /></q-scroll-area>
+        <section id="indexPage"><IndexPage /></section>
+        <section id="aboutPage"><AboutPage /></section>
+        <section id="experiencePage"><ExperiencePage /></section>
+        <section id="projectsPage"><ProjectsPage /></section>
+        <section id="contactsPage"><ContactsPage /></section>
+      </q-scroll-area>
     </q-page-container>
 
     <q-footer
-      elevated=""
+      reveal
+      elevated
       class="text-center"
       style="background-color: transparent; color: black"
     >
