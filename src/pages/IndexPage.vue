@@ -34,14 +34,27 @@
             class="q-ml-sm"
             unelevated
             rounded
+            href="#contactsPage"
             color="black"
             label="Contact Me"
             style="width: 150px"
           />
         </div>
         <div class="row items-center justify-center">
-          <q-btn class="q-mr-sm" round color="black" icon="ion-logo-linkedin" />
-          <q-btn class="q-ml-sm" round color="black" icon="ion-logo-github" />
+          <q-btn
+            class="q-mr-sm"
+            round
+            color="black"
+            icon="ion-logo-linkedin"
+            href="https://www.linkedin.com/in/julius-odref-czar-cabangon-5475002a9/"
+          />
+          <q-btn
+            class="q-ml-sm"
+            round
+            color="black"
+            icon="ion-logo-github"
+            href="https://github.com/Jolayus"
+          />
         </div>
       </div>
     </q-page>
