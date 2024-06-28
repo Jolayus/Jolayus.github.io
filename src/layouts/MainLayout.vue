@@ -20,31 +20,31 @@
 
         <q-btn
           class="q-mx-sm header-button"
-          href="#aboutPage"
           flat
           rounded
           label="About"
+          @click="scrollToSection('aboutPage')"
         />
         <q-btn
           class="q-mx-sm header-button"
-          href="#experiencePage"
           flat
           rounded
           label="Experience"
+          @click="scrollToSection('experiencePage')"
         />
         <q-btn
           class="q-mx-sm header-button"
-          href="#projectsPage"
           flat
           rounded
           label="Projects"
+          @click="scrollToSection('projectsPage')"
         />
         <q-btn
           class="q-mx-sm header-button"
-          href="#contactsPage"
           flat
           rounded
           label="Contacts"
+          @click="scrollToSection('contactsPage')"
         />
       </q-toolbar>
     </q-header>
@@ -94,12 +94,20 @@ export default defineComponent({
     ContactsPage,
   },
   setup() {
+    const scrollToSection = (sectionId) => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+
     return {
       IndexPage,
       AboutPage,
       ExperiencePage,
       ProjectsPage,
       ContactsPage,
+      scrollToSection,
       thumbStyle: {
         backgroundColor: "transparent",
       },
@@ -108,7 +116,7 @@ export default defineComponent({
 });
 </script>
 
-<style>
+<style lang="scss" scoped>
 .main-layout-scroll-area {
   height: 84.555vh;
   max-width: 100vw;
