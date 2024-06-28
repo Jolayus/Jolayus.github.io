@@ -18,10 +18,34 @@
 
         <q-toolbar-title>JSC</q-toolbar-title>
 
-        <q-btn href="#aboutPage" flat label="About" />
-        <q-btn href="#experiencePage" flat label="Experience" />
-        <q-btn href="#projectsPage" flat label="Projects" />
-        <q-btn href="#contactsPage" flat label="Contacts" />
+        <q-btn
+          class="q-mx-sm header-button"
+          href="#aboutPage"
+          flat
+          rounded
+          label="About"
+        />
+        <q-btn
+          class="q-mx-sm header-button"
+          href="#experiencePage"
+          flat
+          rounded
+          label="Experience"
+        />
+        <q-btn
+          class="q-mx-sm header-button"
+          href="#projectsPage"
+          flat
+          rounded
+          label="Projects"
+        />
+        <q-btn
+          class="q-mx-sm header-button"
+          href="#contactsPage"
+          flat
+          rounded
+          label="Contacts"
+        />
       </q-toolbar>
     </q-header>
 
@@ -88,5 +112,13 @@ export default defineComponent({
 .main-layout-scroll-area {
   height: 84.555vh;
   max-width: 100vw;
+}
+
+.header-button {
+  width: 125px;
+}
+
+.red-border {
+  border: 1px solid red;
 }
 </style>
