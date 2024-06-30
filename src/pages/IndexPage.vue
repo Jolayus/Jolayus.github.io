@@ -34,7 +34,7 @@
             class="q-ml-sm"
             unelevated
             rounded
-            href="#contactsPage"
+            @click="scrollToSection('contactsPage')"
             color="black"
             label="Contact Me"
             style="width: 150px"
@@ -62,9 +62,18 @@
 </template>
 
 <script>
-import { defineComponent } from "vue";
-
-export default defineComponent({
+export default {
   name: "IndexPage",
-});
+  setup() {
+    const scrollToSection = (sectionId) => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+    return {
+      scrollToSection,
+    };
+  },
+};
 </script>

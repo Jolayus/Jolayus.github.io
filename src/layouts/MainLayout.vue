@@ -71,14 +71,13 @@
 </template>
 
 <script>
-import { defineComponent } from "vue";
 import IndexPage from "src/pages/IndexPage.vue";
 import AboutPage from "src/pages/AboutPage.vue";
 import ExperiencePage from "src/pages/ExperiencePage.vue";
 import ProjectsPage from "src/pages/ProjectsPage.vue";
 import ContactsPage from "src/pages/ContactsPage.vue";
 
-export default defineComponent({
+export default {
   name: "MainLayout",
   components: {
     IndexPage,
@@ -96,18 +95,13 @@ export default defineComponent({
     };
 
     return {
-      IndexPage,
-      AboutPage,
-      ExperiencePage,
-      ProjectsPage,
-      ContactsPage,
       scrollToSection,
       thumbStyle: {
         backgroundColor: "transparent",
       },
     };
   },
-});
+};
 </script>
 
 <style lang="scss" scoped>
