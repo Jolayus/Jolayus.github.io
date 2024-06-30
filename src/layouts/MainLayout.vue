@@ -8,10 +8,9 @@
     <q-header
       reveal
       elevated
-      class="flex flex-center items-center justify-center"
-      style="height: 10vh; background-color: transparent"
+      class="flex flex-center items-center justify-center text-black transparent"
     >
-      <q-toolbar style="width: 80vw; margin: 0 auto; color: black">
+      <q-toolbar style="width: 80vw">
         <q-avatar color="black">
           <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg" />
         </q-avatar>
@@ -59,12 +58,7 @@
       </q-scroll-area>
     </q-page-container>
 
-    <q-footer
-      reveal
-      elevated
-      class="text-center"
-      style="background-color: transparent; color: black"
-    >
+    <q-footer reveal elevated class="text-center text-black transparent">
       <q-toolbar>
         <q-toolbar-title>
           <p class="q-ma-none text-h6 text-weight-light">
@@ -118,12 +112,16 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .main-layout-scroll-area {
-  height: 84.555vh;
+  height: 89.5vh;
   max-width: 100vw;
 }
 
 .header-button {
   width: 125px;
+}
+
+.header-button:hover {
+  text-decoration: double underline;
 }
 
 .red-border {

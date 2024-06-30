@@ -7,7 +7,7 @@
   >
     <q-page class="column items-center">
       <div class="q-mt-xl column flex-center justify-center items-center">
-        <p class="text-weight-light text-center">Browse My Recent</p>
+        <p class="text-h6 text-weight-light text-center">Browse My Recent</p>
         <p class="text-h3 text-weight-bold text-center">Projects</p>
       </div>
 
