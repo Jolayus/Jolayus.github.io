@@ -16,12 +16,7 @@
       >
         <div>
           <q-avatar class="border-radius-25" rounded size="375px">
-            <q-img
-              src="../assets/default_avatar.webp"
-              style="filter: grayscale(0.6)"
-            >
-              <!-- <div class="absolute-full text-subtitle2 flex flex-center"></div> -->
-            </q-img>
+            <q-img src="../assets/my_photo_3.jpg" />
           </q-avatar>
         </div>
 
@@ -31,24 +26,22 @@
           <div class="about-me-details-section row">
             <div
               class="about-me-details border-radius-25 border-1-solid column items-center justify-center"
-              @click="aboutDialog = true"
+              @click="aboutExperienceDialog = true"
             >
+              <q-icon class="info-icon" name="info" size="20px" />
               <q-icon class="q-mt-md q-mb-sm" name="work_history" size="25px" />
               <p class="q-mb-xs text-h6 text-weight-bold">Experience</p>
-              <p class="q-mb-xs text-h6 text-weight-light">1 year / 1 year</p>
               <p class="q-mb-xs text-h6 text-weight-light">
                 Web Development / Game Development
               </p>
             </div>
             <div
               class="about-me-details border-radius-25 border-1-solid column items-center justify-center"
-              @click="aboutDialog = true"
+              @click="aboutEducationDialog = true"
             >
+              <q-icon class="info-icon" name="info" size="20px" />
               <q-icon class="q-mt-md q-mb-sm" name="school" size="25px" />
               <p class="q-mb-xs text-h6 text-weight-bold">Education</p>
-              <p class="q-mb-xs text-h6 text-weight-light">
-                2023 - Present A.Y.
-              </p>
               <p class="q-mb-xs text-h6 text-weight-light">
                 Bachelor of Science in Computer Science
               </p>
@@ -64,27 +57,154 @@
         </div>
       </div>
 
-      <!-- Temporary -->
-      <q-dialog v-model="aboutDialog">
-        <q-card class="border-radius-25">
+      <!-- Experience -->
+      <q-dialog v-model="aboutExperienceDialog">
+        <q-card class="q-pa-sm border-radius-25">
           <q-toolbar>
-            <q-avatar>
-              <img src="https://cdn.quasar.dev/logo-v2/svg/logo.svg" />
-            </q-avatar>
+            <q-toolbar-title>
+              <span class="q-pl-xs text-weight-bold">Experience</span>
+            </q-toolbar-title>
+            <q-btn flat round dense icon="close" v-close-popup />
+          </q-toolbar>
 
-            <q-toolbar-title
-              ><span class="text-weight-bold">Quasar</span>
-              Framework</q-toolbar-title
-            >
+          <q-card-section style="text-align: justify">
+            <q-list padding>
+              <!-- Actual Experience -->
+              <q-item-label class="text-weight-bold" header>
+                Actual Experience
+              </q-item-label>
+
+              <div>
+                <q-item>
+                  <q-item-section>
+                    <q-item-label overline>
+                      FRONTEND DEVELOPER INTERN
+                    </q-item-label>
+                    <q-item-label class="text-weight-bold">
+                      Pixel8 Web Solutions & Consultancy Inc.
+                    </q-item-label>
+                  </q-item-section>
+
+                  <q-item-section side top>
+                    <q-item-label class="text-weight-bolder" caption>
+                      February 2024 - April 2024
+                    </q-item-label>
+                  </q-item-section>
+                </q-item>
+
+                <q-item>
+                  <q-item-section>
+                    <q-item-label caption>
+                      As a Frontend Developer Intern, I maintained and adhered
+                      to company standards while developing my competency in the
+                      required technology stack and tools. I collaborated with
+                      my team and achieved a level of mastery that enabled me to
+                      guide fellow interns, ensuring high-quality work and
+                      teamwork.
+                    </q-item-label>
+                  </q-item-section>
+                </q-item>
+              </div>
+
+              <q-separator spaced="16px" />
+
+              <!-- Self-Study Experience -->
+              <q-item-label class="text-weight-bold" header>
+                Self-Study Experience
+              </q-item-label>
+
+              <q-item>
+                <q-item-section>
+                  <q-item-label overline> BACKEND DEVELOPER </q-item-label>
+                  <q-item-label class="text-weight-bold">
+                    School Project
+                  </q-item-label>
+                  <q-item-label caption>
+                    Developed a comprehensive online school forum for my senior
+                    high school thesis, utilizing HTML, CSS, JavaScript, PHP,
+                    and SQL. The forum features both admin and user interfaces,
+                    supporting image and video uploads. I am currently
+                    rebuilding this forum with the latest technology stack to
+                    enhance its functionality and user experience.
+                  </q-item-label>
+                </q-item-section>
+              </q-item>
+
+              <q-item>
+                <q-item-section>
+                  <q-item-label overline> UNITY GAME DEVELOPER </q-item-label>
+                  <q-item-label class="text-weight-bold">
+                    School Project
+                  </q-item-label>
+                  <q-item-label caption>
+                    Designed and developed an engaging science quiz game using
+                    C# and Unity. The game dynamically imports questions from
+                    CSV files and offers three difficulty levels: easy, medium,
+                    and hard. This project is still a work in progress, with
+                    ongoing improvements to gameplay and content.
+                  </q-item-label>
+                </q-item-section>
+              </q-item>
+            </q-list>
+          </q-card-section>
+        </q-card>
+      </q-dialog>
+
+      <!-- Education -->
+      <q-dialog v-model="aboutEducationDialog">
+        <q-card class="q-pa-sm border-radius-25">
+          <q-toolbar>
+            <q-toolbar-title>
+              <span class="q-pl-xs text-weight-bold">Education</span>
+            </q-toolbar-title>
 
             <q-btn flat round dense icon="close" v-close-popup />
           </q-toolbar>
 
-          <q-card-section>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-            repellendus sit voluptate voluptas eveniet porro. Rerum blanditiis
-            perferendis totam, ea at omnis vel numquam exercitationem aut, natus
-            minima, porro labore.
+          <q-card-section style="text-align: justify">
+            <q-list padding>
+              <q-item>
+                <q-item-section>
+                  <q-item-label overline>
+                    UNIVERSITY OF CABUYAO <br />
+                    (PAMANTASAN NG CABUYAO)
+                  </q-item-label>
+                  <q-item-label class="text-weight-bold">
+                    Bachelor of Science in Computer Science
+                  </q-item-label>
+                  <q-item-label caption>
+                    Pamantasan ng Cabuyao, Katapatan Homes, Brgy. Banay-banay,
+                    Cabuyao City, Laguna
+                  </q-item-label>
+                </q-item-section>
+
+                <q-item-section side top>
+                  <q-item-label caption>2020 - Present</q-item-label>
+                </q-item-section>
+              </q-item>
+
+              <q-separator spaced />
+
+              <q-item>
+                <q-item-section>
+                  <q-item-label overline>
+                    INFORMATICS COMPUTER INSTITUTE <br />
+                    FESTIVAL MALL ALABANG
+                  </q-item-label>
+                  <q-item-label class="text-weight-bold">
+                    Technical and Vocational Education and Training - ICT
+                  </q-item-label>
+                  <q-item-label caption>
+                    4th Floor Festival Mall, Filinvest Corporate City, Commerce
+                    Ave, Alabang, Muntinlupa, Metro Manila
+                  </q-item-label>
+                </q-item-section>
+
+                <q-item-section side top>
+                  <q-item-label caption>2018 - 2020</q-item-label>
+                </q-item-section>
+              </q-item>
+            </q-list>
           </q-card-section>
         </q-card>
       </q-dialog>
@@ -98,7 +218,10 @@ import { ref } from "vue";
 export default {
   name: "AboutPage",
   setup() {
-    return { aboutDialog: ref(false) };
+    return {
+      aboutExperienceDialog: ref(false),
+      aboutEducationDialog: ref(false),
+    };
   },
 };
 </script>
@@ -144,7 +267,14 @@ export default {
 
 .about-me-details-text {
   text-align: justify;
+  font-size: 16px;
   width: 55vw;
+}
+
+.info-icon {
+  position: absolute;
+  top: 15px; /* Adjust the top position if needed */
+  right: 15px; /* Adjust the right position if needed */
 }
 
 @for $i from 1 through 50 {
