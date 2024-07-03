@@ -12,10 +12,12 @@
     >
       <q-toolbar style="width: 80vw">
         <q-avatar color="black">
-          <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg" />
+          <img src="../assets/logo.png" />
         </q-avatar>
 
-        <q-toolbar-title>JSC</q-toolbar-title>
+        <q-toolbar-title class="q-ml-sm text-h5 text-weight-bold">
+          JSC
+        </q-toolbar-title>
 
         <q-btn
           class="q-mx-sm header-button"

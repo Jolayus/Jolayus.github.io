@@ -144,9 +144,9 @@ module.exports = configure(function (ctx) {
       },
 
       manifest: {
-        name: `Jolayus Web Portfolio`,
+        name: `Web Portfolio`,
         short_name: `Web Portfolio`,
-        description: `A Web Portfolio Project`,
+        description: `A Web Portfolio`,
         display: "standalone",
         orientation: "portrait",
         background_color: "#ffffff",
