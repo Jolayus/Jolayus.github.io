@@ -23,15 +23,17 @@
         </p>
         <div class="q-mb-md row items-center justify-center">
           <q-btn
-            class="q-mr-sm"
+            class="q-mr-sm q-py-md"
             outline
             rounded
             color="black"
             label="Download CV"
             style="width: 150px"
+            href="/JuliusCabangon_CV.pdf"
+            download
           />
           <q-btn
-            class="q-ml-sm"
+            class="q-ml-sm q-py-md"
             unelevated
             rounded
             @click="scrollToSection('contactsPage')"
