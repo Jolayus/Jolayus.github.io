@@ -179,7 +179,9 @@
                 </q-item-section>
 
                 <q-item-section side top>
-                  <q-item-label caption>2020 - Present</q-item-label>
+                  <q-item-label class="text-weight-bolder" caption
+                    >2020 - Present</q-item-label
+                  >
                 </q-item-section>
               </q-item>
 
@@ -201,7 +203,9 @@
                 </q-item-section>
 
                 <q-item-section side top>
-                  <q-item-label caption>2018 - 2020</q-item-label>
+                  <q-item-label class="text-weight-bolder" caption>
+                    2018 - 2020
+                  </q-item-label>
                 </q-item-section>
               </q-item>
             </q-list>

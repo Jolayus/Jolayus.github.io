@@ -27,21 +27,24 @@
             class="experience-article-container flex justify-center items-center wrap"
           >
             <div
-              v-for="i in 7"
-              :key="i"
+              v-for="(item, index) in frontendExperience"
+              :key="index"
               class="experience-article-item flex justify-center items-center border-radius-50"
               @click="experienceDialog = true"
             >
               <q-icon
-                class="q-mr-md q-pa-xs border-3-solid border-radius-25"
-                name="verified"
+                class="experience-article-item-icon q-mr-md q-pa-sm border-2-solid border-radius-25"
+                :name="item.icon"
                 size="30px"
+                :color="black"
               />
 
               <div>
-                <p class="q-ma-none text-h6 text-weight-bolder">HTML</p>
+                <p class="q-ma-none text-h6 text-weight-bolder">
+                  {{ item.name }}
+                </p>
                 <p class="q-ma-none text-overline text-weight-medium">
-                  Experienced
+                  {{ item.experience }}
                 </p>
               </div>
             </div>
@@ -59,22 +62,23 @@
             class="experience-article-container flex justify-center items-center wrap"
           >
             <div
-              v-for="i in 7"
-              :key="i"
+              v-for="(item, index) in backendExperience"
+              :key="index"
               class="experience-article-item flex justify-center items-center border-radius-50"
               @click="experienceDialog = true"
             >
               <q-icon
-                class="q-mr-md q-pa-xs border-3-solid border-radius-25"
-                name="verified"
+                class="experience-article-item-icon q-mr-md q-pa-sm border-2-solid border-radius-25"
+                :name="item.icon"
                 size="30px"
               />
 
               <div>
-                <p class="q-ma-none text-h6 text-weight-bolder">HTML</p>
-
+                <p class="q-ma-none text-h6 text-weight-bolder">
+                  {{ item.name }}
+                </p>
                 <p class="q-ma-none text-overline text-weight-medium">
-                  Experienced
+                  {{ item.experience }}
                 </p>
               </div>
             </div>
@@ -93,21 +97,23 @@
             class="experience-article-container flex justify-center items-center wrap"
           >
             <div
-              v-for="i in 7"
-              :key="i"
+              v-for="(item, index) in gameExperience"
+              :key="index"
               class="experience-article-item flex justify-center items-center border-radius-50"
               @click="experienceDialog = true"
             >
               <q-icon
-                class="q-mr-md q-pa-xs border-3-solid border-radius-25"
-                name="verified"
+                class="experience-article-item-icon q-mr-md q-pa-sm border-2-solid border-radius-25"
+                :name="item.icon"
                 size="30px"
               />
 
               <div>
-                <p class="q-ma-none text-h6 text-weight-bolder">HTML</p>
+                <p class="q-ma-none text-h6 text-weight-bolder">
+                  {{ item.name }}
+                </p>
                 <p class="q-ma-none text-overline text-weight-medium">
-                  Experienced
+                  {{ item.experience }}
                 </p>
               </div>
             </div>
@@ -145,11 +151,57 @@
 
 <script>
 import { ref } from "vue";
+import CSharpLogo from "src/assets/cSharpLogo.svg";
 
 export default {
   name: "ExperiencePage",
   setup() {
-    return { experienceDialog: ref(false) };
+    const experienceDialog = ref(false);
+
+    //Novice, Advanced Beginner, Competent, Proficient, and Expert
+
+    const frontendExperience = [
+      { name: "HTML", experience: "Proficient", icon: "ion-logo-html5" },
+      { name: "CSS", experience: "Proficient", icon: "ion-logo-css3" },
+      {
+        name: "Javascript",
+        experience: "Proficient",
+        icon: "fa-brands fa-js",
+      },
+      { name: "Vue.js", experience: "Proficient", icon: "fa-brands fa-vuejs" },
+      {
+        name: "Quasar",
+        experience: "Proficient",
+        icon: "img:https://cdn.quasar.dev/logo-v2/svg/logo.svg",
+      },
+    ];
+
+    const backendExperience = [
+      { name: "PHP", experience: "Competent", icon: "fa-brands fa-php" },
+      { name: "SQL", experience: "Competent", icon: "fa-solid fa-database" },
+      {
+        name: "Laravel",
+        experience: "Novice",
+        icon: "fa-brands fa-laravel",
+      },
+      {
+        name: "Node.js",
+        experience: "Beginner",
+        icon: "ion-logo-nodejs",
+      },
+    ];
+
+    const gameExperience = [
+      { name: "Unity", experience: "Competent", icon: "fa-brands fa-unity" },
+      { name: "C#", experience: "Competent", icon: `img:${CSharpLogo}` },
+    ];
+
+    return {
+      experienceDialog,
+      frontendExperience,
+      backendExperience,
+      gameExperience,
+    };
   },
 };
 </script>
@@ -160,7 +212,7 @@ export default {
 }
 
 .experience-details-container {
-  min-height: 250px;
+  min-height: 100px;
   width: 700px;
   margin: 16px 16px 16px 16px;
 }
@@ -170,8 +222,8 @@ export default {
 }
 
 .experience-article-item {
-  width: calc(33.3333% - 10px);
-  margin-bottom: 16px;
+  min-width: 200px;
+  margin: 0px 8px 16px 8px;
   position: relative; /* Required for the ::before pseudo-element */
   overflow: hidden; /* To prevent the ::before element from overflowing */
 }
@@ -191,6 +243,10 @@ export default {
 
 .experience-article-item:hover::before {
   opacity: 0.3; /* Change opacity to 50% on hover */
+}
+
+.experience-article-item-icon {
+  filter: brightness(0) saturate(100%); /* To turn SVG into black*/
 }
 
 @for $i from 1 through 50 {
