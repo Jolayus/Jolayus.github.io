@@ -122,7 +122,7 @@
       </div>
 
       <!-- Temporary -->
-      <q-dialog v-model="experienceDialog">
+      <!-- <q-dialog v-model="experienceDialog">
         <q-card class="border-radius-25">
           <q-toolbar>
             <q-avatar>
@@ -144,7 +144,7 @@
             minima, porro labore.
           </q-card-section>
         </q-card>
-      </q-dialog>
+      </q-dialog> -->
     </q-page>
   </transition>
 </template>

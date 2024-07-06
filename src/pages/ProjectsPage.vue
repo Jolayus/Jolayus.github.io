@@ -18,17 +18,20 @@
           class="project-details-container q-ma-md column flex-center justify-center items-center border-1-solid border-radius-25"
         >
           <q-img
-            class="project-details-image border-radius-25"
-            src="https://cdn.quasar.dev/img/parallax2.jpg"
+            class="project-details-image border-1-solid border-radius-25"
+            src="../assets/project1.png"
           >
-            <div class="absolute-full text-subtitle2 flex flex-center"></div>
+            <!-- <div class="absolute-full text-subtitle2 flex flex-center"></div> -->
           </q-img>
 
           <div
             class="q-my-md row items-center justify-center border-1-solid border-radius-25"
           >
-            <p class="q-my-xs q-ml-md q-mr-sm text-h6 text-weight-bold">
-              Project 1
+            <p
+              class="q-my-xs q-ml-md q-mr-sm text-h6 text-weight-bold"
+              style="width: 400px; text-align: center"
+            >
+              Trucking Management System for Ro-ed Logistics and Services
             </p>
             <q-btn
               class="q-mx-sm"
@@ -47,11 +50,62 @@
               rounded
               label="Github"
               style="width: 150px"
+              href="https://github.com/Jolayus/softeng-group-10"
             />
             <q-btn
               class="q-ml-sm"
               outline
               rounded
+              disable
+              label="Live Demo"
+              style="width: 150px"
+            />
+          </div>
+        </div>
+
+        <div
+          class="project-details-container q-ma-md column flex-center justify-center items-center border-1-solid border-radius-25"
+        >
+          <q-img
+            class="project-details-image border-1-solid border-radius-25"
+            src="../assets/project2.png"
+          >
+            <!-- <div class="absolute-full text-subtitle2 flex flex-center"></div> -->
+          </q-img>
+
+          <div
+            class="q-my-md row items-center justify-center border-1-solid border-radius-25"
+          >
+            <p
+              class="q-my-xs q-ml-md q-mr-sm text-h6 text-weight-bold"
+              style="width: 400px; text-align: center"
+            >
+              Landing Page for Ro-ed Logistics and Services
+            </p>
+            <q-btn
+              class="q-mx-sm"
+              size="sm"
+              round
+              color="black"
+              icon="ion-information-circle-outline"
+              @click="projectDialog = true"
+            />
+          </div>
+
+          <div class="row items-center justify-center">
+            <q-btn
+              class="q-mr-sm"
+              outline
+              rounded
+              label="Github"
+              style="width: 150px"
+              href="https://github.com/eyedent1ty/tms-roed-landing-page"
+            />
+            <q-btn
+              class="q-ml-sm"
+              outline
+              rounded
+              disable
               label="Live Demo"
               style="width: 150px"
             />
@@ -60,7 +114,7 @@
       </div>
 
       <!-- Temporary -->
-      <q-dialog v-model="projectDialog">
+      <!-- <q-dialog v-for="i in 5" :key="i" :v-model="i">
         <q-card class="border-radius-25">
           <q-toolbar>
             <q-avatar>
@@ -82,7 +136,7 @@
             minima, porro labore.
           </q-card-section>
         </q-card>
-      </q-dialog>
+      </q-dialog> -->
     </q-page>
   </transition>
 </template>
